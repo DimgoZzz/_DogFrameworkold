@@ -11,7 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Source.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Math\DogInt.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Text\DogString.cpp" />
+    <ClCompile Include="Source\DogFW\Platform\Windows\DogWinDebug.cpp" />
+    <ClCompile Include="Source\DogFW\Platform\Windows\DogWindows.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Time\StopWatch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\DogFW\Common\Math\DogInt.h" />
+    <ClInclude Include="Include\DogFW\Common\Text\DogString.h" />
+    <ClInclude Include="Include\DogFW\Platform\Windows\DogWinDebug.h" />
+    <ClInclude Include="Include\DogFW\Platform\Windows\DogWindows.h" />
+    <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
