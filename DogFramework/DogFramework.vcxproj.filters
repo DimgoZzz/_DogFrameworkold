@@ -26,6 +26,12 @@
     <ClCompile Include="Source\DogFW\Common\Time\StopWatch.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\DogFW\Common\Math\DogVector.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DogFW\Common\Math\SIMDVectorA.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\DogFW\Platform\Windows\DogWindows.h" />
@@ -33,5 +39,7 @@
     <ClInclude Include="Include\DogFW\Common\Text\DogString.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogInt.h" />
     <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\DogVector.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\SIMDVectorA.h" />
   </ItemGroup>
 </Project>
