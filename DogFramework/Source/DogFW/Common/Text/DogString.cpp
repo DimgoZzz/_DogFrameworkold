@@ -17,7 +17,7 @@ namespace DogFW
 		}
 
 		std::wstring res(nLenOfWideCharStr, L'0');
-		MultiByteToWideChar(CP_ACP, 0, str.c_str(), (int)str.length(), &res[0], nLenOfWideCharStr);
+		MultiByteToWideChar(CP_ACP, 0, str.c_str(), (int)str.length(), res.data(), nLenOfWideCharStr);
 
 		return res;
 	}
@@ -32,7 +32,7 @@ namespace DogFW
 		}
 
 		string res(nLenOfCharStr, L'0');
-		WideCharToMultiByte(CP_ACP, 0, wstr.c_str(), (int)wstr.length(), &res[0], nLenOfCharStr, NULL, NULL);
+		WideCharToMultiByte(CP_ACP, 0, wstr.c_str(), (int)wstr.length(), res.data(), nLenOfCharStr, NULL, NULL);
 
 		return res;
 	}
