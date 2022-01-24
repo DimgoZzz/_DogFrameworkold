@@ -18,6 +18,7 @@
     <ClCompile Include="Source\DogFW\Platform\Windows\DogWinDebug.cpp" />
     <ClCompile Include="Source\DogFW\Platform\Windows\DogWindows.cpp" />
     <ClCompile Include="Source\DogFW\Common\Time\StopWatch.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\DogFW\Common\Math\DogVector.h" />
@@ -27,6 +28,7 @@
     <ClInclude Include="Include\DogFW\Platform\Windows\DogWindows.h" />
     <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h" />
     <ClInclude Include="Include\DogFW\Common\Math\SIMDVectorA.h" />
+    <ClInclude Include="Include\DogFW\Common\Time\Timer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
