@@ -1,4 +1,4 @@
-#include "DogFw/Platform/Windows/DogWinDebug.h"
+#include "DogFW/External/Windows/DogWinDebug.h"
 #include <comdef.h>
 
 namespace DogFW

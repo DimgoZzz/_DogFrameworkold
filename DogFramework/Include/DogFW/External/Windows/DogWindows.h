@@ -3,4 +3,4 @@
 #include <Windows.h>
 
 //Should be after Windows.h? For non cyclic include
-#include "DogFW/Platform/Windows/DogWinDebug.h"
+#include "DogFW/External/Windows/DogWinDebug.h"

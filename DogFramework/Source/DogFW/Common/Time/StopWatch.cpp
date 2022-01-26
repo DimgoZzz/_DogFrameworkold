@@ -1,5 +1,5 @@
 #include "DogFW/Common/Time/StopWatch.h"
-#include "DogFW/Platform/Windows/DogWindows.h"
+#include "DogFW/External/Windows/DogWindows.h"
 
 using namespace DogFW;
 
@@ -46,5 +46,5 @@ int64 DogFW::SimpleStopWatch::GetTickElapsed() const
 
 float DogFW::SimpleStopWatch::GetTimeElapsed() const
 {
-	return ((double)GetTickElapsed())*mSecondsPerTick;
+	return static_cast<float>(((double)GetTickElapsed())*mSecondsPerTick);
 }

@@ -1,6 +1,6 @@
 #include "DogFW/Common/Text/DogString.h"
 
-#include "DogFW/Platform/Windows/DogWindows.h"
+#include "DogFW/External/Windows/DogWindows.h"
 
 #include <vector>
 #include <stdarg.h>

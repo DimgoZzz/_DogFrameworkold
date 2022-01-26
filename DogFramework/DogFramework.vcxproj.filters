@@ -11,10 +11,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\DogFW\Platform\Windows\DogWindows.cpp">
+    <ClCompile Include="Source\DogFW\External\Windows\DogWindows.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\DogFW\Platform\Windows\DogWinDebug.cpp">
+    <ClCompile Include="Source\DogFW\External\Windows\DogWinDebug.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\DogFW\Common\Text\DogString.cpp">
@@ -37,8 +37,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\DogFW\Platform\Windows\DogWindows.h" />
-    <ClInclude Include="Include\DogFW\Platform\Windows\DogWinDebug.h" />
+    <ClInclude Include="Include\DogFW\External\Windows\DogWindows.h" />
+    <ClInclude Include="Include\DogFW\External\Windows\DogWinDebug.h" />
     <ClInclude Include="Include\DogFW\Common\Text\DogString.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogInt.h" />
     <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h" />

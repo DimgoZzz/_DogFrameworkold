@@ -1,5 +1,5 @@
 #include "DogFW/Common/Time/Timer.h"
-#include "DogFW/Platform/Windows/DogWindows.h"
+#include "DogFW/External/Windows/DogWindows.h"
 
 namespace DogFW
 {

@@ -15,8 +15,8 @@
     <ClCompile Include="Source\DogFW\Common\Math\DogVector.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogInt.cpp" />
     <ClCompile Include="Source\DogFW\Common\Text\DogString.cpp" />
-    <ClCompile Include="Source\DogFW\Platform\Windows\DogWinDebug.cpp" />
-    <ClCompile Include="Source\DogFW\Platform\Windows\DogWindows.cpp" />
+    <ClCompile Include="Source\DogFW\External\Windows\DogWinDebug.cpp" />
+    <ClCompile Include="Source\DogFW\External\Windows\DogWindows.cpp" />
     <ClCompile Include="Source\DogFW\Common\Time\StopWatch.cpp" />
     <ClCompile Include="Source\DogFW\Common\Time\Timer.cpp" />
   </ItemGroup>
@@ -24,8 +24,8 @@
     <ClInclude Include="Include\DogFW\Common\Math\DogVector.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogInt.h" />
     <ClInclude Include="Include\DogFW\Common\Text\DogString.h" />
-    <ClInclude Include="Include\DogFW\Platform\Windows\DogWinDebug.h" />
-    <ClInclude Include="Include\DogFW\Platform\Windows\DogWindows.h" />
+    <ClInclude Include="Include\DogFW\External\Windows\DogWinDebug.h" />
+    <ClInclude Include="Include\DogFW\External\Windows\DogWindows.h" />
     <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h" />
     <ClInclude Include="Include\DogFW\Common\Math\SIMDVectorA.h" />
     <ClInclude Include="Include\DogFW\Common\Time\Timer.h" />

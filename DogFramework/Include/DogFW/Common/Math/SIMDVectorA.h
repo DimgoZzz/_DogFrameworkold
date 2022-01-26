@@ -2,9 +2,10 @@
 #include <DirectXMath.h>
 #include "DogFW/Common/Math/DogInt.h"
 
-//4D vector based on XMVector aligned struct
+
 namespace DogFW
 {
+	//4D vector based on XMVector aligned struct
 	class SIMDVector4DAligned
 	{
 #pragma region Contructors

@@ -1,5 +1,5 @@
 #pragma once
-#include "DogFW/Platform/Windows/DogWindows.h"
+#include "DogFW/External/Windows/DogWindows.h"
 
 #include "DogFW/Common/Text/DogString.h"
 
@@ -7,10 +7,10 @@
 
 //Path to codefile and line macros
 #define D_FILESHRT_ (std::wcsrchr(__FILEW__, L'\\') ? std::wcsrchr(__FILEW__, L'\\') + 1 : __FILEW__)
-#define D_FILELINE_ ((DFORMWSTR(L"%s Line %i",_DFILESHRT_,__LINE__)).c_str())
+#define D_FILELINE_ ((DogFW::FormatWString(L"%s Line %i",D_FILESHRT_,__LINE__)).c_str())
 
 //Functions
-#define DCRITERR(x) DogFW::DCriticalError(D_FORM_WSTR(L"Error: %s \n%s",x,D_FILE_LINE))
+#define D_CRITERR(x) DogFW::CritErr(DogFW::FormatWString(L"Error: %s \n%s",x,D_FILELINE_))
 #pragma endregion Macros
 
 namespace DogFW
