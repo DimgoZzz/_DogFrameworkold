@@ -11,6 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\DogFW\Common\Log\LoggerSimple.cpp" />
+    <ClCompile Include="Source\DogFW\Engine\Core\IApplication.cpp" />
+    <ClCompile Include="Source\DogFW\Engine\Core\Application.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\SIMDVectorA.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogVector.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogInt.cpp" />
@@ -21,6 +24,9 @@
     <ClCompile Include="Source\DogFW\Common\Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\DogFW\Common\Log\LoggerSimple.h" />
+    <ClInclude Include="Include\DogFW\Engine\Core\IApplication.h" />
+    <ClInclude Include="Include\DogFW\Engine\Core\Application.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogVector.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogInt.h" />
     <ClInclude Include="Include\DogFW\Common\Text\DogString.h" />

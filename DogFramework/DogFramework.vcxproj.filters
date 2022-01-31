@@ -35,15 +35,45 @@
     <ClCompile Include="Source\DogFW\Common\Time\Timer.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\DogFW\Engine\Core\Application.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DogFW\Engine\Core\IApplication.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DogFW\Common\Log\LoggerSimple.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\DogFW\External\Windows\DogWindows.h" />
-    <ClInclude Include="Include\DogFW\External\Windows\DogWinDebug.h" />
-    <ClInclude Include="Include\DogFW\Common\Text\DogString.h" />
-    <ClInclude Include="Include\DogFW\Common\Math\DogInt.h" />
-    <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h" />
-    <ClInclude Include="Include\DogFW\Common\Math\DogVector.h" />
-    <ClInclude Include="Include\DogFW\Common\Math\SIMDVectorA.h" />
-    <ClInclude Include="Include\DogFW\Common\Time\Timer.h" />
+    <ClInclude Include="Include\DogFW\Engine\Core\Application.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\Common\Math\DogInt.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\Common\Text\DogString.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\Common\Math\DogVector.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\External\Windows\DogWinDebug.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\External\Windows\DogWindows.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\Common\Math\SIMDVectorA.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\Common\Time\Timer.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DogFW\Engine\Core\IApplication.h" />
+    <ClInclude Include="Include\DogFW\Common\Log\LoggerSimple.h" />
   </ItemGroup>
 </Project>
