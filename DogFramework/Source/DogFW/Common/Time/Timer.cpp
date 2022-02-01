@@ -8,29 +8,29 @@ namespace DogFW
 		pausedTime_(0),prevTime_(0),currTime_(0),stopTime_(0),isStopped_(false)
 	{
 		QueryPerformanceFrequency((LARGE_INTEGER*)&countsPerSec_);
-		secondsPerCount_ = 1.0 / (double)countsPerSec_;
+		secondsPerCount_ = 1.0 / (Double)countsPerSec_;
 	}
 
-	float Timer::getTotalTime() const
+	Float Timer::getTotalTime() const
 	{
 		if (isStopped_)
 		{
-			return (float)(((stopTime_ - baseTime_) - pausedTime_) * secondsPerCount_);
+			return (Float)(((stopTime_ - baseTime_) - pausedTime_) * secondsPerCount_);
 		}
 		else
 		{
-			(float)(((currTime_ - baseTime_) - pausedTime_) * secondsPerCount_);
+			(Float)(((currTime_ - baseTime_) - pausedTime_) * secondsPerCount_);
 		}
 	}
 
-	float Timer::getDeltaTime() const
+	Float Timer::getDeltaTime() const
 	{
-		return (float)deltaTime_;
+		return (Float)deltaTime_;
 	}
 
 	void Timer::reset()
 	{
-		int64 currtime;
+		Int64 currtime;
 		QueryPerformanceCounter((LARGE_INTEGER*)&currtime);
 
 		baseTime_ = currtime;
@@ -41,7 +41,7 @@ namespace DogFW
 
 	void Timer::start()
 	{
-		int64 starttime;
+		Int64 starttime;
 		QueryPerformanceCounter((LARGE_INTEGER*)&starttime);
 
 		if (isStopped_)
@@ -58,7 +58,7 @@ namespace DogFW
 	{
 		if (isStopped_)
 		{
-			int64 currtime;
+			Int64 currtime;
 			QueryPerformanceCounter((LARGE_INTEGER*)&currtime);
 
 			stopTime_ = currtime;
@@ -73,7 +73,7 @@ namespace DogFW
 			deltaTime_ = 0.0;
 		}
 		
-		int64 currtime;
+		Int64 currtime;
 		QueryPerformanceCounter((LARGE_INTEGER*)&currtime);
 		currTime_ = currtime;
 

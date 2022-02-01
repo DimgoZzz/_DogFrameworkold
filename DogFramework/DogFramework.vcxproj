@@ -11,30 +11,38 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\DogFW\Common\Log\LoggerSimple.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Math\DogBool.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Math\SIMDVector.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Math\DogFloat.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Text\DogChar.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Logging\LoggerSimple.cpp" />
     <ClCompile Include="Source\DogFW\Engine\Core\IApplication.cpp" />
     <ClCompile Include="Source\DogFW\Engine\Core\Application.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\SIMDVectorA.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogVector.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogInt.cpp" />
     <ClCompile Include="Source\DogFW\Common\Text\DogString.cpp" />
-    <ClCompile Include="Source\DogFW\External\Windows\DogWinDebug.cpp" />
     <ClCompile Include="Source\DogFW\External\Windows\DogWindows.cpp" />
     <ClCompile Include="Source\DogFW\Common\Time\StopWatch.cpp" />
     <ClCompile Include="Source\DogFW\Common\Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\DogFW\Common\Log\LoggerSimple.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\DogBool.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\DogFloat.h" />
+    <ClInclude Include="Include\DogFW\DogBase.h" />
+    <ClInclude Include="Include\DogFW\Common\Text\DogChar.h" />
+    <ClInclude Include="Include\DogFW\Common\Logging\LoggerSimple.h" />
     <ClInclude Include="Include\DogFW\Engine\Core\IApplication.h" />
     <ClInclude Include="Include\DogFW\Engine\Core\Application.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogVector.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogInt.h" />
     <ClInclude Include="Include\DogFW\Common\Text\DogString.h" />
-    <ClInclude Include="Include\DogFW\External\Windows\DogWinDebug.h" />
+    <ClInclude Include="Include\DogFW\External\Windows\DogDX12.h" />
     <ClInclude Include="Include\DogFW\External\Windows\DogWindows.h" />
     <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h" />
     <ClInclude Include="Include\DogFW\Common\Math\SIMDVectorA.h" />
     <ClInclude Include="Include\DogFW\Common\Time\Timer.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\SIMDVector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

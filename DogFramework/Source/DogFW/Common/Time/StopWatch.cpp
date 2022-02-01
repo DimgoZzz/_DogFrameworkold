@@ -4,47 +4,47 @@
 using namespace DogFW;
 
 SimpleStopWatch::SimpleStopWatch() :
-	mStartTick(0),
-	mStopTick(0)
+	startTick_(0),
+	stopTick_(0)
 {
-	int64 countsPerSec;
+	Int64 countsPerSec;
 	QueryPerformanceFrequency((LARGE_INTEGER*)&countsPerSec);
-	mSecondsPerTick = 1.0 / (double)countsPerSec;
+	mSecondsPerTick_ = 1.0 / (Double)countsPerSec;
 }
 
-void DogFW::SimpleStopWatch::Start()
+void DogFW::SimpleStopWatch::start()
 {
-	int64 temp;
+	Int64 temp;
 	QueryPerformanceCounter((LARGE_INTEGER*)&temp);
-	mStartTick = temp;
+	startTick_ = temp;
 }
 
-void DogFW::SimpleStopWatch::Stop()
+void DogFW::SimpleStopWatch::stop()
 {
-	int64 temp;
+	Int64 temp;
 	QueryPerformanceCounter((LARGE_INTEGER*)&temp);
-	mStopTick = temp;
+	stopTick_ = temp;
 
 }
 
-int64 DogFW::SimpleStopWatch::GetStartTick() const
+Int64 DogFW::SimpleStopWatch::getStartTick() const
 {
-	return mStartTick;
+	return startTick_;
 }
 
-int64 SimpleStopWatch::GetCurrentTick() const
+Int64 SimpleStopWatch::getCurrentTick() const
 {
-	int64 currTime;
+	Int64 currTime;
 	QueryPerformanceCounter((LARGE_INTEGER*)&currTime);
 	return currTime;
 }
 
-int64 DogFW::SimpleStopWatch::GetTickElapsed() const
+Int64 DogFW::SimpleStopWatch::getTickElapsed() const
 {
-	return mStopTick-mStartTick;
+	return stopTick_ - startTick_;
 }
 
-float DogFW::SimpleStopWatch::GetTimeElapsed() const
+Float DogFW::SimpleStopWatch::getTimeElapsed() const
 {
-	return static_cast<float>(((double)GetTickElapsed())*mSecondsPerTick);
+	return static_cast<Float>(((Double)getTickElapsed())*mSecondsPerTick_);
 }

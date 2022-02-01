@@ -5,4 +5,5 @@ namespace DogFW
 	IApplication::IApplication()
 	{
 	}
+	IApplication::~IApplication() {};
 }

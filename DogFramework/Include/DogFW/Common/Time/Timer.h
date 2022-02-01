@@ -1,5 +1,5 @@
 #pragma once
-#include "DogFW/Common/Math/DogInt.h"
+#include "DogFW/DogBase.h"
 
 namespace DogFW
 {
@@ -9,8 +9,8 @@ namespace DogFW
 	public:
 		Timer();
 
-		float getTotalTime()const; // in seconds
-		float getDeltaTime()const; // in seconds
+		Float getTotalTime()const; // in seconds
+		Float getDeltaTime()const; // in seconds
 
 		void reset(); // Call before message loop.
 		void start(); // Call when unpaused.
@@ -18,16 +18,16 @@ namespace DogFW
 		void tick();  //tCall every frame.
 
 	private:
-		double secondsPerCount_;
-		int64  countsPerSec_;
-		double deltaTime_;
+		Double secondsPerCount_;
+		Int64  countsPerSec_;
+		Double deltaTime_;
 
-		int64 baseTime_;
-		int64 pausedTime_;
-		int64 stopTime_;
-		int64 prevTime_;
-		int64 currTime_;
+		Int64 baseTime_;
+		Int64 pausedTime_;
+		Int64 stopTime_;
+		Int64 prevTime_;
+		Int64 currTime_;
 
-		bool isStopped_;
+		Bool isStopped_;
 	};
 }

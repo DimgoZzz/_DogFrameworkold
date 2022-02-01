@@ -5,10 +5,11 @@ namespace DogFW
 {
 	class Application : public IApplication
 	{
+	public:
 		Application();
 		~Application();
 	public:
-		void Update() override;
-		void Init() override;
+		void initialize() override;
+		void update() override;
 	};
 }

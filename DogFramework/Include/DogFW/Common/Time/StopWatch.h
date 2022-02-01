@@ -1,5 +1,5 @@
 #pragma once
-#include "DogFW/Common/Math/DogInt.h"
+#include "DogFW/DogBase.h"
 
 namespace DogFW
 {
@@ -8,17 +8,17 @@ namespace DogFW
 	public:
 		SimpleStopWatch();
 
-		void Start();
-		void Stop();
+		void start();
+		void stop();
 
-		int64 GetStartTick()   const;
-		int64 GetCurrentTick() const;
-		int64 GetTickElapsed() const;
-		float GetTimeElapsed() const;
+		Int64 getStartTick()   const;
+		Int64 getCurrentTick() const;
+		Int64 getTickElapsed() const;
+		Float getTimeElapsed() const;
 	private:
-		double mSecondsPerTick;
+		Double mSecondsPerTick_;
 
-		int64 mStartTick;
-		int64 mStopTick;
+		Int64 startTick_;
+		Int64 stopTick_;
 	};
 }

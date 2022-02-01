@@ -4,13 +4,11 @@ namespace DogFW
 {
 	class IApplication
 	{
-	public:
+	protected:
 		IApplication();
 		virtual ~IApplication() = 0;
-
 	public:
-		virtual void Init() = 0;
-		virtual void Update() = 0;
-
+		virtual void initialize() = 0;
+		virtual void update() = 0;
 	};
 }

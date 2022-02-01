@@ -1,7 +1,6 @@
 #pragma once
-#include <DirectXMath.h>
-#include "DogFW/Common/Math/DogInt.h"
-
+#include "DogFW/DogBase.h"
+#include "DogFW/External/Windows/DogDX12.h"
 
 namespace DogFW
 {
@@ -10,19 +9,19 @@ namespace DogFW
 	{
 #pragma region Contructors
 	public:
-		SIMDVector4DAligned() : xmvec(DirectX::XMVectorZero()) {};
-		SIMDVector4DAligned(DirectX::XMVECTOR invec) : xmvec(invec) {};
+		SIMDVector4DAligned() : xmVec_(DirectX::XMVectorZero()) {};
+		SIMDVector4DAligned(DirectX::XMVECTOR invec) : xmVec_(invec) {};
 
-		SIMDVector4DAligned(float x, float y, float z, float w) : xmvec(DirectX::XMVectorSet(x, y, z, w)) {};
-		SIMDVector4DAligned(uint32 x, uint32 y, uint32 z, uint32 w) : xmvec(DirectX::XMVectorSetInt(x, y, z, w)) {};
+		SIMDVector4DAligned(Float x, Float y, Float z, Float w) : xmVec_(DirectX::XMVectorSet(x, y, z, w)) {};
+		SIMDVector4DAligned(UInt32 x, UInt32 y, UInt32 z, UInt32 w) : xmVec_(DirectX::XMVectorSetInt(x, y, z, w)) {};
 
-		SIMDVector4DAligned(float value) :xmvec(DirectX::XMVectorReplicate(value)) {};
-		SIMDVector4DAligned(uint32 value) :xmvec(DirectX::XMVectorReplicateInt(value)) {};
+		SIMDVector4DAligned(Float value) :xmVec_(DirectX::XMVectorReplicate(value)) {};
+		SIMDVector4DAligned(UInt32 value) :xmVec_(DirectX::XMVectorReplicateInt(value)) {};
 
 		//Copy Constr
-		SIMDVector4DAligned(const SIMDVector4DAligned& in) noexcept : xmvec(in.xmvec) {};
+		SIMDVector4DAligned(const SIMDVector4DAligned& in) noexcept : xmVec_(in.xmVec_) {};
 		//Assign Constr
-		SIMDVector4DAligned(SIMDVector4DAligned&& in) noexcept : xmvec(in.xmvec) {};
+		SIMDVector4DAligned(SIMDVector4DAligned&& in) noexcept : xmVec_(in.xmVec_) {};
 #pragma endregion Contructors
 #pragma region Operators
 	public:
@@ -31,7 +30,7 @@ namespace DogFW
 		{
 			if (&in != this)
 			{
-				xmvec = in.xmvec;
+				xmVec_ = in.xmVec_;
 			}
 			return *this;
 		}
@@ -40,7 +39,7 @@ namespace DogFW
 		{
 			if (&in != this)
 			{
-				xmvec = in.xmvec;
+				xmVec_ = in.xmVec_;
 			}
 			return *this;
 		}
@@ -49,77 +48,77 @@ namespace DogFW
 		SIMDVector4DAligned operator-() const
 		{
 			SIMDVector4DAligned temp;
-			temp.xmvec = DirectX::XMVectorNegate(xmvec);
+			temp.xmVec_ = DirectX::XMVectorNegate(xmVec_);
 			return temp;
 		}
 
 		SIMDVector4DAligned& operator+=(SIMDVector4DAligned const& in)
 		{
-			xmvec = DirectX::XMVectorAdd(xmvec, in.xmvec);
+			xmVec_ = DirectX::XMVectorAdd(xmVec_, in.xmVec_);
 			return *this;
 		}
 		SIMDVector4DAligned& operator-=(SIMDVector4DAligned const& in)
 		{
 			//using namespace DirectX;
-			xmvec = DirectX::XMVectorSubtract(xmvec, in.xmvec);
+			xmVec_ = DirectX::XMVectorSubtract(xmVec_, in.xmVec_);
 			return *this;
 		}
 		SIMDVector4DAligned& operator*=(SIMDVector4DAligned const& in)
 		{
-			xmvec = DirectX::XMVectorMultiply(xmvec, in.xmvec);
+			xmVec_ = DirectX::XMVectorMultiply(xmVec_, in.xmVec_);
 			return *this;
 		}
 		SIMDVector4DAligned& operator/=(SIMDVector4DAligned const& in)
 		{
-			xmvec = DirectX::XMVectorMultiply(xmvec, DirectX::XMVectorReciprocal(in.xmvec));
+			xmVec_ = DirectX::XMVectorMultiply(xmVec_, DirectX::XMVectorReciprocal(in.xmVec_));
 			return *this;
 		}
 
 		SIMDVector4DAligned operator+ (SIMDVector4DAligned const& rin) {
-			return SIMDVector4DAligned(DirectX::XMVectorAdd(xmvec, rin.xmvec));
+			return SIMDVector4DAligned(DirectX::XMVectorAdd(xmVec_, rin.xmVec_));
 		}
 		SIMDVector4DAligned operator- (SIMDVector4DAligned const& rin) {
-			return SIMDVector4DAligned(DirectX::XMVectorSubtract(xmvec, rin.xmvec));
+			return SIMDVector4DAligned(DirectX::XMVectorSubtract(xmVec_, rin.xmVec_));
 		}
 		SIMDVector4DAligned operator* (SIMDVector4DAligned const& rin) {
-			return SIMDVector4DAligned(DirectX::XMVectorMultiply(xmvec, rin.xmvec));
+			return SIMDVector4DAligned(DirectX::XMVectorMultiply(xmVec_, rin.xmVec_));
 		}
 		SIMDVector4DAligned operator/ (SIMDVector4DAligned const& rin) {
-			return SIMDVector4DAligned(DirectX::XMVectorDivide(xmvec, rin.xmvec));
+			return SIMDVector4DAligned(DirectX::XMVectorDivide(xmVec_, rin.xmVec_));
 		}
 #pragma endregion Operators
 #pragma region GetSet
 	public:
-		float GetX() const { return DirectX::XMVectorGetX(xmvec); }
-		float GetY() const { return DirectX::XMVectorGetY(xmvec); }
-		float GetZ() const { return DirectX::XMVectorGetZ(xmvec); }
-		float GetW() const { return DirectX::XMVectorGetW(xmvec); }
-		uint32  GetIntX() const { return DirectX::XMVectorGetIntX(xmvec); }
-		uint32  GetIntY() const { return DirectX::XMVectorGetIntY(xmvec); }
-		uint32  GetIntZ() const { return DirectX::XMVectorGetIntZ(xmvec); }
-		uint32  GetIntW() const { return DirectX::XMVectorGetIntW(xmvec); }
+		Float getX() const { return DirectX::XMVectorGetX(xmVec_); }
+		Float getY() const { return DirectX::XMVectorGetY(xmVec_); }
+		Float getZ() const { return DirectX::XMVectorGetZ(xmVec_); }
+		Float getW() const { return DirectX::XMVectorGetW(xmVec_); }
+		UInt32  getIntX() const { return DirectX::XMVectorGetIntX(xmVec_); }
+		UInt32  getIntY() const { return DirectX::XMVectorGetIntY(xmVec_); }
+		UInt32  getIntZ() const { return DirectX::XMVectorGetIntZ(xmVec_); }
+		UInt32  getIntW() const { return DirectX::XMVectorGetIntW(xmVec_); }
 
-		void SetX(const float value) { xmvec = DirectX::XMVectorSetX(xmvec, value); }
-		void SetY(const float value) { xmvec = DirectX::XMVectorSetY(xmvec, value); }
-		void SetZ(const float value) { xmvec = DirectX::XMVectorSetZ(xmvec, value); }
-		void SetW(const float value) { xmvec = DirectX::XMVectorSetW(xmvec, value); }
+		void setX(const Float value) { xmVec_ = DirectX::XMVectorSetX(xmVec_, value); }
+		void setY(const Float value) { xmVec_ = DirectX::XMVectorSetY(xmVec_, value); }
+		void setZ(const Float value) { xmVec_ = DirectX::XMVectorSetZ(xmVec_, value); }
+		void setW(const Float value) { xmVec_ = DirectX::XMVectorSetW(xmVec_, value); }
 
-		void SetIntX(const uint32 value) { xmvec = DirectX::XMVectorSetIntX(xmvec, value); }
-		void SetIntY(const uint32 value) { xmvec = DirectX::XMVectorSetIntY(xmvec, value); }
-		void SetIntZ(const uint32 value) { xmvec = DirectX::XMVectorSetIntZ(xmvec, value); }
-		void SetIntW(const uint32 value) { xmvec = DirectX::XMVectorSetIntW(xmvec, value); }
+		void setIntX(const UInt32 value) { xmVec_ = DirectX::XMVectorSetIntX(xmVec_, value); }
+		void setIntY(const UInt32 value) { xmVec_ = DirectX::XMVectorSetIntY(xmVec_, value); }
+		void setIntZ(const UInt32 value) { xmVec_ = DirectX::XMVectorSetIntZ(xmVec_, value); }
+		void setIntW(const UInt32 value) { xmVec_ = DirectX::XMVectorSetIntW(xmVec_, value); }
 #pragma endregion GetSet
 #pragma region Functions 
 	public:
 		//Returns Abs(Vector)
-		SIMDVector4DAligned Abs() const
+		SIMDVector4DAligned abs() const
 		{
 			SIMDVector4DAligned temp;
-			temp.xmvec = DirectX::XMVectorAbs(xmvec);
+			temp.xmVec_ = DirectX::XMVectorAbs(xmVec_);
 			return temp;
 		}
 #pragma endregion Functions
 	private:
-		alignas(16) DirectX::XMVECTOR xmvec;
+		alignas(16) DirectX::XMVECTOR xmVec_;
 	};
 }

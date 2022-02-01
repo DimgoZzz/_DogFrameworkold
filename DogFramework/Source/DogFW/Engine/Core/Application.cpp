@@ -8,10 +8,10 @@ namespace DogFW
 	Application::~Application()
 	{
 	}
-	void Application::Update()
+	void Application::update()
 	{
 	}
-	void Application::Init()
+	void Application::initialize()
 	{
 	}
 }

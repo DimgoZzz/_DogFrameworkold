@@ -1,21 +1,22 @@
 #pragma once
-#include <string>
+#include "DogFW/Common/Text/DogChar.h"
+#include <String>
 
 
 //#define D_FORMWSTR(x,...) DogFW::FormatString(x,__VA_ARGS__)
 
 namespace DogFW
 {
-	using wstring = std::wstring;
-	using string = std::string;
+	using WString = std::wstring;
+	using String = std::string;
 
 	namespace StringConverter
 	{
-		//Converts string/wstring using CP_ACP(default Windows ANSI code page.)
-		wstring	StringToWide(const string& str);
-		string WideToString(const wstring& wstr);
+		//Converts String/WString using CP_ACP(default Windows ANSI code page.)
+		WString	stringToWide(const String& str);
+		String wideToString(const WString& wstr);
 	};
 
-	std::wstring FormatWString(const wstring fmt, ...);
+	WString formatWString(const WChar* fmt, ...);
 }
 
