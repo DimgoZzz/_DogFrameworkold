@@ -1,5 +1,6 @@
 #pragma once
-#include "DogFW/DogBase.h"
+#include "DogFW/DogBasicTypes.h"
+#include <vector>
 
 namespace DogFW
 {
@@ -8,7 +9,7 @@ namespace DogFW
 	{
 	public:
 		LoggerSimple ();
-	
+		LoggerSimple (WString path,WString name);
 		~LoggerSimple();
 	public:
 		//Log to local String, call saveToFile for saving 
@@ -18,6 +19,8 @@ namespace DogFW
 		void setNewPath(const WString path);
 		void saveToFile();
 	private:
-		WString filePath_ = L"Log\\SimpleLog.log";
+		WString filePath_ = L"Log/";
+		WString fileName_ = L"SimpleLog.log";
+		std::vector<WString> messages;
 	};
 }

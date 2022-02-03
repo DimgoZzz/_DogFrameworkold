@@ -10,10 +10,10 @@
 //Path of file
 #define D_FILEPATHSHRT_ (std::wcsrchr(__FILEW__, L'\\') ? std::wcsrchr(__FILEW__, L'\\') + 1 : __FILEW__)
 //Patn and line of macro
-#define D_FILELINE_ ((DogFW::FormatWString(L"%s Line %i",D_FILEPATHSHRT_,__LINE__)).c_str())
+#define D_FILELINE_ ((DogFW::formatWString(L"%s Line %i",D_FILEPATHSHRT_,__LINE__)).c_str())
 
 //
-#define D_CRITERR(x) DogFW::CritErr(DogFW::FormatWString(L"Error: %s \n%s",x,D_LINE_))
+#define D_CRITERR(x) DogFW::critErr(DogFW::formatWString(L"Error: %s \n%s",x,D_FILELINE_))
 #pragma endregion Macros
 
 

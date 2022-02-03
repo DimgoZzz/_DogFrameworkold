@@ -98,7 +98,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\WinMain.cpp" />
+    <ClCompile Include="Source\ConsMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DogFramework\DogFramework.vcxproj">

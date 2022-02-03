@@ -11,11 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\DogFW\Engine\Core\AppSettings.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogBool.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\SIMDVector.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogFloat.cpp" />
     <ClCompile Include="Source\DogFW\Common\Text\DogChar.cpp" />
-    <ClCompile Include="Source\DogFW\Common\Logging\LoggerSimple.cpp" />
+    <ClCompile Include="Source\DogFW\Common\Log\LoggerSimple.cpp" />
     <ClCompile Include="Source\DogFW\Engine\Core\IApplication.cpp" />
     <ClCompile Include="Source\DogFW\Engine\Core\Application.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\SIMDVectorA.cpp" />
@@ -27,11 +28,12 @@
     <ClCompile Include="Source\DogFW\Common\Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\DogFW\Engine\Core\AppSettings.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogBool.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogFloat.h" />
-    <ClInclude Include="Include\DogFW\DogBase.h" />
+    <ClInclude Include="Include\DogFW\DogBasicTypes.h" />
     <ClInclude Include="Include\DogFW\Common\Text\DogChar.h" />
-    <ClInclude Include="Include\DogFW\Common\Logging\LoggerSimple.h" />
+    <ClInclude Include="Include\DogFW\Common\Log\LoggerSimple.h" />
     <ClInclude Include="Include\DogFW\Engine\Core\IApplication.h" />
     <ClInclude Include="Include\DogFW\Engine\Core\Application.h" />
     <ClInclude Include="Include\DogFW\Common\Math\DogVector.h" />

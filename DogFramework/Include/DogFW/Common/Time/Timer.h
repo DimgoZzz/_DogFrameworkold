@@ -1,5 +1,5 @@
 #pragma once
-#include "DogFW/DogBase.h"
+#include "DogFW/DogBasicTypes.h"
 
 namespace DogFW
 {
