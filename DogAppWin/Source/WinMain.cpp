@@ -14,8 +14,6 @@ using namespace DogFW;
 
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR lpCmdLine, _In_ int nShowCmd)
 {
-	LoggerSimple l(L"Gaw/",L"DogLog.log");
-	l.logs(L"Gaw %s %i", L"jjj",4);
 	
 
 	return 0;
