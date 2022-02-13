@@ -1,9 +1,10 @@
-#pragma once
 #include <string>
-#include "DogFW/Common/Text/DogChar.h"
+export module DogFW.BasicTypes.String;
+export import DogFW.BasicTypes.Char;
 
+//#define D_FORMWSTR(x,...) DogFW::FormatString(x,__VA_ARGS__)
 
-namespace DogFW
+export namespace DogFW :: inline BasicTypes
 {
 	using WString = std::wstring;
 	using String = std::string;
@@ -17,4 +18,10 @@ namespace DogFW
 	};
 
 	WString formatWString(const WChar* fmt, ...);
+}
+
+//export namespace DogSTD = std;
+export namespace DogSTD
+{
+	
 }

@@ -1,7 +1,8 @@
-#pragma once
 #include <stdint.h>
 
-namespace DogFW
+export module DogFW.BasicTypes.Int;
+
+export namespace DogFW :: inline BasicTypes
 {
 	using	Int8 = int8_t;
 	using	Int16 = int16_t;
@@ -12,3 +13,4 @@ namespace DogFW
 	using	UInt32 = uint32_t;
 	using	UInt64 = uint64_t;
 }
+

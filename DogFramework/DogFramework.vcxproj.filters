@@ -56,13 +56,25 @@
     <ClCompile Include="Source\DogFW\Engine\Core\AppSettings.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Modules\BasicTypes\BasicTypes.ixx">
+    <ClCompile Include="Modules\Common\BasicTypes.ixx">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Modules\BasicTypes\Int.ixx">
+    <ClCompile Include="Modules\Common\Math\DogInt.ixx">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Modules\BasicTypes\Float.ixx">
+    <ClCompile Include="Modules\Common\Math\DogFloat.ixx">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Common\Math\DogBool.ixx">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Common\Text\DogChar.ixx">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Common\Text\DogString.ixx">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\DogWindows.ixx">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -70,19 +82,7 @@
     <ClInclude Include="Include\DogFW\Engine\Core\Application.h">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Include\DogFW\Common\Math\DogInt.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\DogFW\Common\Text\DogString.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\DogFW\Common\Math\DogVector.h">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="Include\DogFW\External\Windows\DogWindows.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Include\DogFW\Common\Math\SIMDVectorA.h">
       <Filter>Source</Filter>
     </ClInclude>
     <ClInclude Include="Include\DogFW\Common\Time\StopWatch.h">
@@ -93,12 +93,16 @@
     </ClInclude>
     <ClInclude Include="Include\DogFW\Engine\Core\IApplication.h" />
     <ClInclude Include="Include\DogFW\Common\Log\LoggerSimple.h" />
-    <ClInclude Include="Include\DogFW\Common\Text\DogChar.h" />
-    <ClInclude Include="Include\DogFW\DogBasicTypes.h" />
-    <ClInclude Include="Include\DogFW\Common\Math\DogFloat.h" />
-    <ClInclude Include="Include\DogFW\Common\Math\SIMDVector.h" />
     <ClInclude Include="Include\DogFW\External\Windows\DogDX12.h" />
-    <ClInclude Include="Include\DogFW\Common\Math\DogBool.h" />
     <ClInclude Include="Include\DogFW\Engine\Core\AppSettings.h" />
+    <ClInclude Include="Include\DogFW\DogBasicTypes.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\DogBool.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\DogFloat.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\DogVector.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\SIMDVector.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\SIMDVectorA.h" />
+    <ClInclude Include="Include\DogFW\Common\Text\DogString.h" />
+    <ClInclude Include="Include\DogFW\Common\Math\DogInt.h" />
+    <ClInclude Include="Include\DogFW\Common\Text\DogChar.h" />
   </ItemGroup>
 </Project>

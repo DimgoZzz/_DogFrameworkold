@@ -1,8 +1,7 @@
 export module DogFW.BasicTypes.Float;
 
-export namespace DogFW::BasicTypes
+export namespace DogFW :: inline BasicTypes
 {
 	using Float = float;
 	using Double = double;
-};
-
+}
