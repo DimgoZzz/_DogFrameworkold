@@ -11,6 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Modules\BasicTypes\BasicTypes.ixx" />
+    <ClCompile Include="Modules\BasicTypes\Float.ixx" />
+    <ClCompile Include="Modules\BasicTypes\Int.ixx" />
     <ClCompile Include="Source\DogFW\Engine\Core\AppSettings.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogBool.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\SIMDVector.cpp" />
@@ -23,7 +26,7 @@
     <ClCompile Include="Source\DogFW\Common\Math\DogVector.cpp" />
     <ClCompile Include="Source\DogFW\Common\Math\DogInt.cpp" />
     <ClCompile Include="Source\DogFW\Common\Text\DogString.cpp" />
-    <ClCompile Include="Source\DogFW\External\Windows\DogWindows.cpp" />
+    <ClCompile Include="Source\External\Windows\DogWindows.cpp" />
     <ClCompile Include="Source\DogFW\Common\Time\StopWatch.cpp" />
     <ClCompile Include="Source\DogFW\Common\Time\Timer.cpp" />
   </ItemGroup>

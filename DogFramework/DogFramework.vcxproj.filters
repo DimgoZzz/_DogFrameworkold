@@ -11,7 +11,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\DogFW\External\Windows\DogWindows.cpp">
+    <ClCompile Include="Source\External\Windows\DogWindows.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\DogFW\Common\Text\DogString.cpp">
@@ -54,6 +54,15 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\DogFW\Engine\Core\AppSettings.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BasicTypes\BasicTypes.ixx">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BasicTypes\Int.ixx">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\BasicTypes\Float.ixx">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
