@@ -1,5 +1,5 @@
+module;
 #include <stdint.h>
-
 export module DogFW.BasicTypes.Int;
 
 export namespace DogFW :: inline BasicTypes
@@ -13,4 +13,3 @@ export namespace DogFW :: inline BasicTypes
 	using	UInt32 = uint32_t;
 	using	UInt64 = uint64_t;
 }
-

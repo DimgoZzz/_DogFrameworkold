@@ -1,2 +1,3 @@
+#include "DogFW/External/Windows/DogWindows.h"
+
 export module DogWindows;
-export import <Windows.h>;
